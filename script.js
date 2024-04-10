@@ -1,10 +1,12 @@
 const form = document.querySelector("form");
+const NewBtn = document.querySelector("#NewBtn");
+// const newgameBtn = document.querySelector("#newGameBtn");
 var randomNumber = Math.floor(Math.random() * 100 + 1);
 
+console.log(NewBtn);
 let attempt = 0;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const input = document.querySelector("#input");
   const userNum = Number(input.value);
   const msgBox = document.querySelector(".msgBox");
@@ -13,21 +15,20 @@ form.addEventListener("submit", (e) => {
     attempt++;
     if (userNum === randomNumber) {
       thatGret.innerHTML = "That`s Great !! You Win";
-      thatGret.style.color = "orange";
       msgBox.innerHTML = `Congratulations !!! You Guess in ${attempt} Attempt!`;
-      input.setAttribute(readonly);
+      input.setAttribute("readonly", true);
       msgBox.style.color = "yellow";
-      msgBox.style.fontSize = "2.1vw";
       input.value = "";
+      NewBtn.classList.remove("hide");
+
+      console.log(NewBtn.classList);
     } else if (userNum > randomNumber) {
       msgBox.innerHTML = "Your Number is Greator than";
       msgBox.style.color = "aqua";
-      msgBox.style.fontSize = "2vw";
       input.value = "";
     } else {
       msgBox.innerHTML = "Your Number is less than ";
       msgBox.style.color = "aqua";
-      msgBox.style.fontSize = "2vw";
       input.value = "";
     }
   } else {
@@ -35,4 +36,14 @@ form.addEventListener("submit", (e) => {
     msgBox.style.color = "red";
     input.value = "";
   }
+});
+
+let disable = () => {
+  msgBox.innerHTML = "";
+};
+
+NewBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.reload();
+  }, 2000);
 });

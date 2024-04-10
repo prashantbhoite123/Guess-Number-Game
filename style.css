@@ -7,6 +7,7 @@
 
 .container {
   height: 100vh;
+  background-color: #59B4C3;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -17,36 +18,37 @@
   color: yellow;
 }
 .thatgret {
-    color: yellow;
+  color: yellow;
 }
 #input {
-
-    height: 3vw;
-     width: 10vw;
-     text-align: center;
-     border: 2px  dotted blue;
-    border-top-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+  height: 3vw;
+  width: 10vw;
+  text-align: center;
+  border: 2px dotted blue;
+  border-top-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
 }
-#input::placeholder{
+#input::placeholder {
   font-size: 1rem;
   color: black;
 }
 
-#checkbtn{
+#checkbtn {
   height: 2.5vw;
   width: 6vw;
   /* border-radius: 3vw; */
   cursor: pointer;
   margin-left: 2vw;
-  border:2px solid yellow;
+  border: 2px solid yellow;
   background-color: red;
   color: aliceblue;
   border-bottom-left-radius: 2vw;
-    border-top-right-radius: 2vw;
+  border-top-right-radius: 2vw;
 }
+
+
 .box {
-  background: #0C0C0C;
+  background: #0c0c0c;
   display: flex;
   flex-wrap: wrap;
   border: 2px solid white;
@@ -54,19 +56,34 @@
   justify-content: center;
   align-items: center;
   height: 80%;
-  width: 50%;
+  width: 50%;  
   padding: auto;
+}
+.thatGret {
+  font-size: 1.7rem;
+  background-color: orange;
+}
+#NewBtn {
+  height: 2.5vw;
+  width: 6vw;
+  cursor: pointer;
+  margin-left: 2vw;
+  border: 2px solid yellow;
+  background-color: red;
+  color: aliceblue;
+  border-bottom-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  margin-top: 3vw;
 }
 
 form {
-  margin-top: 30px
+  margin-top: 30px;
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .container {
     height: 100vh;
     width: 100vw;
-    
   }
   .box {
     height: 100%;
@@ -76,20 +93,32 @@ form {
     height: 10vw;
     width: 20vw;
     font-size: 5vw;
-      border-bottom-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
     border-top-right-radius: 2vw;
   }
   #input {
     height: 15vw;
-     width: 40vw;
-     font-size: 10vw;
-     color: black;
-         border-top-left-radius: 2vw;
+    width: 40vw;
+    font-size: 10vw;
+    color: black;
+    border-top-left-radius: 2vw;
     border-bottom-right-radius: 2vw;
-}
-  .msgBox{
+  }
+  .msgBox {
     font-size: 8vw;
     width: 90%;
     text-align: center;
   }
+  #NewBtn {
+    height: 10vw;
+    width: 20vw;
+    font-size: 3.5vw;
+    margin-top: 5vw;
+    border-bottom-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+  }
+}
+
+.hide {
+  display: none;
 }
