@@ -1,6 +1,5 @@
 const form = document.querySelector("form");
 var randomNumber = Math.floor(Math.random() * 100 + 1);
-alert(randomNumber);
 
 let attempt = 0;
 form.addEventListener("submit", (e) => {
